@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap'); 
+
+body {
+  margin: 0 auto;
+  width: 40%;
+  background-color:black;
+  color: #FCAE1E;
+  font-family: lato;
+}
+
+#img-div {
+  display: block;
+  background: rgb(94,182,212);
+  background: linear-gradient(97deg, rgba(94,182,212,1) 0%, rgba(255,255,255,1) 24%, rgba(2,155,186,1) 100%); 
+  color: black;
+  margin: 1vw;
+  padding: 1vw;
+  font-size: 1.2vw;
+}
+
+#image {
+  display: block;
+  margin: 0 auto;
+  width: 40w;
+  max-width: 100%;
+}
+
+#img-caption {
+  margin: auto;
+  margin-top: 1vw;
+  width: 82%;
+}
+
+h1 {
+  margin: 0 auto;
+  margin-bottom: 1vw;
+  width: 40%;
+  text-transform: uppercase;
+  color: #e30b5d;
+}
