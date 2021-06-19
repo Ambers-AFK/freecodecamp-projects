@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCC Survey Form</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <h1 class="main__title" id="title">Survey Form</h1>
+        <p class="main__description" id="description">
+          A survey form made for FreeCodeCamp's Responsive Web Design curriculum.
+        </p>
+        
+        <form class="form" id="survey-form">
+          <div class="form__part">
+          <label class="form__label" id="name-label" for="name">Name:</label>
+          <input class="form__input" type="name" placeholder="John Smith" id="name" required>
+          <label class="form__label" id="email-label" for="email"> E-mail:</label>
+          <input class="form__input" type="email" placeholder="john.smith@email.com" id="email" required>
+          <label class="form_label" for="number" id="number-label">Age:</label>
+          <input class="form__input" type="number" min="13" max="100" placeholder="20" id="number">
+          <label class="form_label" for="dropdown">Please select your gender:</label>
+          <select class="form__input" id="dropdown">
+            <option>Please choose</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+          </div>
+          <p class="form__question"> Do you like my survey? </p>
+          <div class="form__part">
+          <label class="form__label" for="radio__yes"> Yes </label>
+          <input class="form__box" type="radio" name="like" id="radio__yes" value="yes">
+          <label class="form__label" for="radio__kinda"> Kinda </label>
+          <input class="form__box" type="radio" name="like" id="radio__kinda" value="kinda">
+          <label class="form__label" for="radio__no"> No </label>
+          <input class="form__box" type="radio" name="like" id="radio__no" value="no">
+          <div class="form__check">
+            <label class="form__label" for="terms"> Do you agree with our terms and conditions?</label>
+            <input class="form__box" type="checkbox" id="terms" value="terms">
+          </div>
+          <div class="form__check">
+            <label class="form__label" for="newsletter"> Wanna sign up to our newsletter?</label>
+            <input class="form__box" type="checkbox" id="newsletter" value="newsletter">
+            </div>
+           </div>
+          <div class="form__end">
+          <label class="form__label">Anything you would like to say?</label>
+          <textarea rows="4"></textarea>
+          </div>
+          <input type="submit" value="Submit" id="submit">
+        </form>
+      </div>
+</body>
+</html>
