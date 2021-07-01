@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+body {
+  font-family: "Montserrat";
+}
+
+header {
+  display: flex;
+  top: 0;
+  height: 3em;
+  width: 100%;
+  padding: 1em;
+  justify-content: space-between;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+header ul {
+  display: inline-flex;
+  list-style: none;
+  margin-right: 1.5rem;
+}
+header ul li {
+  margin-top: -0.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 0.2rem;
+}
+header ul li a {
+  text-decoration: none;
+  color: #ef0075;
+  font-weight: 700;
+}
+header ul li a:hover {
+  font-size: 1.1rem;
+}
+
+b {
+  color: #ef0075;
+}
+
+h2 {
+  color: #ef0075;
+}
+
+#main {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+#main .grid-align-center {
+  grid-column: 2/3;
+  justify-self: center;
+}
+#main #demo {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+#main #video {
+  width: 100%;
+  height: 25vw;
+}
+#main #contact {
+  width: 100%;
+  margin-bottom: 6rem;
+}
+#main #contact #form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+@media screen and (max-width: 900px) {
+  #main {
+    grid-template-columns: 1fr;
+  }
+  #main #video {
+    height: 50vw;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
