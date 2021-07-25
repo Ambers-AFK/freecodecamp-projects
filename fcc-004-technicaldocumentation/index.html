@@ -1,241 +1,248 @@
-<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-
-<main id="main-doc">
-  <nav id="navbar">
-    <header>  Programming <br> in Lua </header>
-    <ul>
-      <li><a class="nav-link" href="#Overview">Overview</a></li>
-      <li><a class="nav-link" href="#Setup">Setup</a></li>
-      <li><a class="nav-link" href="#Getting_started">Getting started</a></li>
-      <li><a class="nav-link" href="#Comments">Comments</a></li>
-      <li><a class="nav-link" href="#Variables">Variables</a></li>
-      <li><a class="nav-link" href="#Operators">Operators</a></li>
-      <li><a class="nav-link" href="#Conditionals">Conditionals</a></li>
-      <li><a class="nav-link" href="#Functions">Functions</a></li>
-      <li><a class="nav-link" href="#Loops">Loops</a></li>
-      <li><a class="nav-link" href="#Tables">Tables</a></li>
-      <li><a class="nav-link" href="#Modules">Modules</a></li>
-      <li><a class="nav-link" href="#Other">Other</a></li>
-    </ul>
-  </nav>
-  
-  <div>
-    <section id="Overview" class="main-section">
-      <header>Overview</header>
-      
-      <p>What is Lua?</p>
-      
-      <p>Lua is a lightweight, high-level, multi-paradigm programming language designed primarily for embedded use in applications. Lua is cross-platform, since the interpreter of compiled bytecode is written in ANSI C, and Lua has a relatively simple C API to embed it into applications.</p>
-    </section>
-    
-    <section id="Setup" class="main-section">
-      <header>Setup</header>
-
-      <p> Installation setup on Linux (Debian / Ubuntu based distro) </p>
-      
-      <p>To get the newest version of Lua (Lua 5.4) just type into your terminal:</p>
-      <code> $ sudo apt-get install lua5.4 </code>
-      <p> And you should be good to go. </p>
-      <p> To test to see if everything is working properly you can type into your terminal: </p>
-      <code> $ lua -v </code>
-      <p> The output of that command should be something similar to </p>
-      <code> Lua 5.4.2  Copyright (C) 1994-2020 Lua.org, PUC-Rio</code>
-      <p> It is pretty easy to get started with Lua on other Linux distros, Windows and MacOS, but the installation process for them will not be covered here.</p>
-    </section>
-    
-    <section id="Getting_started" class="main-section">
-      <header>Getting started</header>
-      
-      <p> Now that you have Lua installed, how do you use it? </p>
-      <p> There are two main ways of using Lua, those being through the interactive shell and using lua to launch a program from a file. </p>
-      <p> The interactive shell is the program that gets called when you simply type Lua in the terminal without any other arguments it looks something like this:</p>
-      <code>$ lua
-Lua 5.4.2  Copyright (C) 1994-2020 Lua.org, PUC-Rio
-></code>
-      <p> You can go ahead and write your programs in here, but it is not going to be very efficient and you won't really be able to save your work without some headaches. The interactive shell is great if you want to test a feature you are working on. </p>
-      <p> The ogligatory "Hello, World!" program will look something like this in the interactive shell: </p>
-      <code>$ lua
-Lua 5.4.2  Copyright (C) 1994-2020 Lua.org, PUC-Rio
-> print("Hello, World!")
-Hello, World!
->
-</code>
-      <p>But if you want to write code, you probably will want to do so in an external file, for that you simply type inside the terminal for example for a file called main.lua: </p>
-      <code>$ lua main.lua
-Hello, World!</code>
-    </section>
-    
-    <section id="Comments" class="main-section">
-      <header>Comments</header>
-      
-      <p> Comments are a very important part of every programming language, these can be notes written by programmers for themselves or other programmers, or any other kind of message that you don't want the computer to interpret.</p>
-      <p> In Lua to write a single-line comment you type -- followed by the comment </p>
-      <code>--this is a single-line comment</code>
-      <p> To write a multi-line comment you type --[[ to begin and ]] to end the comment </p>
-      <code>--[[
-This is a multi-line comment!        
-]]</code>
-    </section>
-
-    <section id="Variables" class="main-section">
-      <header>Variables</header>
-      
-      <p>Variables are a way to store information, these are usually compared to boxes, the values stored in these variables can be of a couple different data types such as:</p>
-      <ul>
-        <li>nil</li>
-        <li>boolean</li>
-        <li>number</li>
-        <li>string</li>
-        <li>function</li>
-        <li>userdata</li>
-        <li>thread</li>
-        <li>table</li>
-      </ul>
-      
-      <p>There are global and local variables, if you don't know what you're doing it is best practice to use for the most part only local variables.</p>
-      <p>You assign a variable like this:</p>
-      <p>either</p>
-      <code>local var_name = data</code>
-      <p>or</p>
-      <code>var_name = data</code>
-      <p> Where var_name is the name of your variable and data is the data you want to store </p>
-      
-      <p>You can also add a new special type of variable called a constant, which as the name implies cannot be changed, you can do that by typing local var_name &#60;const&#62; = data but keep in mind that this was added in the newer versions of Lua only, so if you work with older versions of it, this will not work.</p>
-      
-    </section>
-
-    <section id="Operators" class="main-section">
-      <header>Operators</header>
-            
-      <p>An operator is a symbol that indicates Lua that there is a specific manipulation to be done with some inputs.</p>
-      <p>There are a number of operators, including:</p>
-      <p>Matematical operators:</p>
-      <ul>
-        <li>+ addition</li>
-        <li>- substraction</li>
-        <li>* multiplication</li>
-        <li>/ division</li>
-        <li>^ exponentiation</li>
-        <li>% modulus</li>
-      </ul>
-      <p>Relational operators:</p>
-      <ul>
-        <li>== equal</li>
-        <li>~= not equal</li>
-        <li>> greater than</li>
-        <li>< less than </li>
-        <li>>= greater than or equal</li>
-        <li><= less than or equal</li>
-      </ul>
-      <p>Logical operators:</p>
-      <ul>
-        <li>and</li>
-        <li>or</li>
-        <li>not</li>
-      </ul>
-      <p>Misc. operators:</p>
-      <ul>
-        <li>= assignment</li>
-        <li>.. concatenation</li>
-        <li># length return</li>
-      </ul>
-    </section>
-    
-    <section id="Conditionals" class="main-section">
-      <header>Conditionals</header>
-            
-      <p>Conditionals are as the name implies things that based on set conditions do something.</p>
-      <p>There are 3 words that can be used to define a condition:</p>
-      <ul>
-        <li>if</li>
-        <li>else</li>
-        <li>elseif</li>
-      </ul>
-      <p>After if you need to put in brackets a boolean operation that can be either true or false to be verified.</p>
-      <p>After if and the condition to be verified you also need to write the keyword "then".</p>
-      <p>If you want to have a condition for when the condition you are verifying is false you can do that with the "else" keyword.</p>
-      <p>If you want to verify different criteria you can also use the "elseif" keyword, but you need to do so before using the "else" keyword.</p>
-      <p>At the end of the conditional you need to use the "end" keyword.</p>
-      <p>A conditional statement will look something like this:</p>
-      <code>if (boolean) then
-        do something
-elseif (boolean)
-        do something else
-else
-        do something
-end</code>
-    </section>
-    
-    <section id="Functions" class="main-section">
-      <header>Functions</header>
-            
-      <p>In computer programming there is the concept of keeping your code "DRY" (Don't Repeat Yourself). And functions help us achieve just that. These are reusable pieces of code that we can use when we don't want to repeat ourselves.</p>
-      <p>There are different ways of making a function:</p>
-      <p>Like this:</p>
-      <code>function name_function()
-      something to be done
-end</code>
-      <p>Like this:</p>
-      <code>function()
-      something to be done
-end</code>
-      <p>Or like this:</p>
-      <code>var_name = function()
-        something to be done
-end</code>
-      <p>In between the paranthesis you can add arguments to be used in your function, for example if you want to make a function that adds two numbers you could write it as function(x, y), where x is one number and y is the other number.</p>
-    </section>
-    
-    <section id="Loops" class="main-section">
-      <header>Loops</header>
-            
-      <p>Loops are constructs used for when you want to repeat something until a condition is no longer true.</p>
-      <p>There are three types of loops in lua:</p>
-      <ul>
-        <li>while loops</li>
-        <li>for loops</li>
-        <li>repeat until loops</li>
-      </ul>
-      <p>The differences between them are, that while loops only check the condition, for loops check the condition and update the variable used until that condition is met, and repeat until loops are like while loops but are executed at least once, the condition being checked is only checked at the end.</p>
-      <p>A loop is similar to a conditional, but you need to write the "do" keyword instead of the "then" keyword. Except for the repeat until loops.</p>
-      <p>The loops will look something like this:</p>
-      <code>while(boolean) do
-        something
-end
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FCC Technical Documentation</title>
+</head>
+<body>
+    <main id="main-doc">
+        <nav id="navbar">
+            <header>  Programming <br> in Lua </header>
+            <ul>
+            <li><a class="nav-link" href="#Overview">Overview</a></li>
+            <li><a class="nav-link" href="#Setup">Setup</a></li>
+            <li><a class="nav-link" href="#Getting_started">Getting started</a></li>
+            <li><a class="nav-link" href="#Comments">Comments</a></li>
+            <li><a class="nav-link" href="#Variables">Variables</a></li>
+            <li><a class="nav-link" href="#Operators">Operators</a></li>
+            <li><a class="nav-link" href="#Conditionals">Conditionals</a></li>
+            <li><a class="nav-link" href="#Functions">Functions</a></li>
+            <li><a class="nav-link" href="#Loops">Loops</a></li>
+            <li><a class="nav-link" href="#Tables">Tables</a></li>
+            <li><a class="nav-link" href="#Modules">Modules</a></li>
+            <li><a class="nav-link" href="#Other">Other</a></li>
+            </ul>
+        </nav>
         
-        
-
-for i = int, min/max, step do
-        something
-end
-        
-        
-        
-repeat
-        something
-until (boolean)</code>
-    </section>
-    
-    <section id="Tables" class="main-section">
-      <header>Tables</header>
+        <div>
+            <section id="Overview" class="main-section">
+            <header>Overview</header>
             
-      <p>Tables are a way of storing data. The most basic table can be made using:</p>
-      <code>local table_name = {table_entry1, table_entry2, (etc)}</code>
-      <p>You can access the data in a table using table_name[x], where x is a number.</p>
-      <p>To be continued.. </p>
-    </section>
-    
-    <section id="Modules" class="main-section">
-      <header>Modules</header>
+            <p>What is Lua?</p>
             
-      <p>Modules are a way to include code from other files. You use:</p>
-      <code>require("file")</code>
-    </section>
-    
-    <section id="Other" class="main-section">
-      <header>Other</header>
+            <p>Lua is a lightweight, high-level, multi-paradigm programming language designed primarily for embedded use in applications. Lua is cross-platform, since the interpreter of compiled bytecode is written in ANSI C, and Lua has a relatively simple C API to embed it into applications.</p>
+            </section>
             
-      <p>There are a lot of other things that are not covered here, so please check out the official documentation or other tutorials on the internet, this is meant to be just a quick introduction to Lua.</p>
-    </section>
-  </div>
-</main>
+            <section id="Setup" class="main-section">
+            <header>Setup</header>
+        
+            <p> Installation setup on Linux (Debian / Ubuntu based distro) </p>
+            
+            <p>To get the newest version of Lua (Lua 5.4) just type into your terminal:</p>
+            <code> $ sudo apt-get install lua5.4 </code>
+            <p> And you should be good to go. </p>
+            <p> To test to see if everything is working properly you can type into your terminal: </p>
+            <code> $ lua -v </code>
+            <p> The output of that command should be something similar to </p>
+            <code> Lua 5.4.2  Copyright (C) 1994-2020 Lua.org, PUC-Rio</code>
+            <p> It is pretty easy to get started with Lua on other Linux distros, Windows and MacOS, but the installation process for them will not be covered here.</p>
+            </section>
+            
+            <section id="Getting_started" class="main-section">
+            <header>Getting started</header>
+            
+            <p> Now that you have Lua installed, how do you use it? </p>
+            <p> There are two main ways of using Lua, those being through the interactive shell and using lua to launch a program from a file. </p>
+            <p> The interactive shell is the program that gets called when you simply type Lua in the terminal without any other arguments it looks something like this:</p>
+            <code>$ lua
+        Lua 5.4.2  Copyright (C) 1994-2020 Lua.org, PUC-Rio
+        ></code>
+            <p> You can go ahead and write your programs in here, but it is not going to be very efficient and you won't really be able to save your work without some headaches. The interactive shell is great if you want to test a feature you are working on. </p>
+            <p> The ogligatory "Hello, World!" program will look something like this in the interactive shell: </p>
+            <code>$ lua
+        Lua 5.4.2  Copyright (C) 1994-2020 Lua.org, PUC-Rio
+        > print("Hello, World!")
+        Hello, World!
+        >
+        </code>
+            <p>But if you want to write code, you probably will want to do so in an external file, for that you simply type inside the terminal for example for a file called main.lua: </p>
+            <code>$ lua main.lua
+        Hello, World!</code>
+            </section>
+            
+            <section id="Comments" class="main-section">
+            <header>Comments</header>
+            
+            <p> Comments are a very important part of every programming language, these can be notes written by programmers for themselves or other programmers, or any other kind of message that you don't want the computer to interpret.</p>
+            <p> In Lua to write a single-line comment you type -- followed by the comment </p>
+            <code>--this is a single-line comment</code>
+            <p> To write a multi-line comment you type --[[ to begin and ]] to end the comment </p>
+            <code>--[[
+        This is a multi-line comment!        
+        ]]</code>
+            </section>
+        
+            <section id="Variables" class="main-section">
+            <header>Variables</header>
+            
+            <p>Variables are a way to store information, these are usually compared to boxes, the values stored in these variables can be of a couple different data types such as:</p>
+            <ul>
+                <li>nil</li>
+                <li>boolean</li>
+                <li>number</li>
+                <li>string</li>
+                <li>function</li>
+                <li>userdata</li>
+                <li>thread</li>
+                <li>table</li>
+            </ul>
+            
+            <p>There are global and local variables, if you don't know what you're doing it is best practice to use for the most part only local variables.</p>
+            <p>You assign a variable like this:</p>
+            <p>either</p>
+            <code>local var_name = data</code>
+            <p>or</p>
+            <code>var_name = data</code>
+            <p> Where var_name is the name of your variable and data is the data you want to store </p>
+            
+            <p>You can also add a new special type of variable called a constant, which as the name implies cannot be changed, you can do that by typing local var_name &#60;const&#62; = data but keep in mind that this was added in the newer versions of Lua only, so if you work with older versions of it, this will not work.</p>
+            
+            </section>
+        
+            <section id="Operators" class="main-section">
+            <header>Operators</header>
+                    
+            <p>An operator is a symbol that indicates Lua that there is a specific manipulation to be done with some inputs.</p>
+            <p>There are a number of operators, including:</p>
+            <p>Matematical operators:</p>
+            <ul>
+                <li>+ addition</li>
+                <li>- substraction</li>
+                <li>* multiplication</li>
+                <li>/ division</li>
+                <li>^ exponentiation</li>
+                <li>% modulus</li>
+            </ul>
+            <p>Relational operators:</p>
+            <ul>
+                <li>== equal</li>
+                <li>~= not equal</li>
+                <li>> greater than</li>
+                <li>< less than </li>
+                <li>>= greater than or equal</li>
+                <li><= less than or equal</li>
+            </ul>
+            <p>Logical operators:</p>
+            <ul>
+                <li>and</li>
+                <li>or</li>
+                <li>not</li>
+            </ul>
+            <p>Misc. operators:</p>
+            <ul>
+                <li>= assignment</li>
+                <li>.. concatenation</li>
+                <li># length return</li>
+            </ul>
+            </section>
+            
+            <section id="Conditionals" class="main-section">
+            <header>Conditionals</header>
+                    
+            <p>Conditionals are as the name implies things that based on set conditions do something.</p>
+            <p>There are 3 words that can be used to define a condition:</p>
+            <ul>
+                <li>if</li>
+                <li>else</li>
+                <li>elseif</li>
+            </ul>
+            <p>After if you need to put in brackets a boolean operation that can be either true or false to be verified.</p>
+            <p>After if and the condition to be verified you also need to write the keyword "then".</p>
+            <p>If you want to have a condition for when the condition you are verifying is false you can do that with the "else" keyword.</p>
+            <p>If you want to verify different criteria you can also use the "elseif" keyword, but you need to do so before using the "else" keyword.</p>
+            <p>At the end of the conditional you need to use the "end" keyword.</p>
+            <p>A conditional statement will look something like this:</p>
+            <code>if (boolean) then
+                do something
+        elseif (boolean)
+                do something else
+        else
+                do something
+        end</code>
+            </section>
+            
+            <section id="Functions" class="main-section">
+            <header>Functions</header>
+                    
+            <p>In computer programming there is the concept of keeping your code "DRY" (Don't Repeat Yourself). And functions help us achieve just that. These are reusable pieces of code that we can use when we don't want to repeat ourselves.</p>
+            <p>There are different ways of making a function:</p>
+            <p>Like this:</p>
+            <code>function name_function()
+            something to be done
+        end</code>
+            <p>Like this:</p>
+            <code>function()
+            something to be done
+        end</code>
+            <p>Or like this:</p>
+            <code>var_name = function()
+                something to be done
+        end</code>
+            <p>In between the paranthesis you can add arguments to be used in your function, for example if you want to make a function that adds two numbers you could write it as function(x, y), where x is one number and y is the other number.</p>
+            </section>
+            
+            <section id="Loops" class="main-section">
+            <header>Loops</header>
+                    
+            <p>Loops are constructs used for when you want to repeat something until a condition is no longer true.</p>
+            <p>There are three types of loops in lua:</p>
+            <ul>
+                <li>while loops</li>
+                <li>for loops</li>
+                <li>repeat until loops</li>
+            </ul>
+            <p>The differences between them are, that while loops only check the condition, for loops check the condition and update the variable used until that condition is met, and repeat until loops are like while loops but are executed at least once, the condition being checked is only checked at the end.</p>
+            <p>A loop is similar to a conditional, but you need to write the "do" keyword instead of the "then" keyword. Except for the repeat until loops.</p>
+            <p>The loops will look something like this:</p>
+            <code>while(boolean) do
+                something
+        end
+                
+                
+        
+        for i = int, min/max, step do
+                something
+        end
+                
+                
+                
+        repeat
+                something
+        until (boolean)</code>
+            </section>
+            
+            <section id="Tables" class="main-section">
+            <header>Tables</header>
+                    
+            <p>Tables are a way of storing data. The most basic table can be made using:</p>
+            <code>local table_name = {table_entry1, table_entry2, (etc)}</code>
+            <p>You can access the data in a table using table_name[x], where x is a number.</p>
+            <p>To be continued.. </p>
+            </section>
+            
+            <section id="Modules" class="main-section">
+            <header>Modules</header>
+                    
+            <p>Modules are a way to include code from other files. You use:</p>
+            <code>require("file")</code>
+            </section>
+            
+            <section id="Other" class="main-section">
+            <header>Other</header>
+                    
+            <p>There are a lot of other things that are not covered here, so please check out the official documentation or other tutorials on the internet, this is meant to be just a quick introduction to Lua.</p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
