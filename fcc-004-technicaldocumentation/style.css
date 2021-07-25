@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+body {
+  background: #030380;
+  color: white;
+  font-family: "Poppins";
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+nav header {
+  margin-top: 0.8em;
+  top: 1.2em;
+  position: sticky;
+  text-align: center;
+  font-size: 1.8rem;
+}
+nav ul {
+  margin-top: 0.8rem;
+  top: 8.2rem;
+  position: sticky;
+  list-style: none;
+}
+nav ul a {
+  text-decoration: none;
+  color: white;
+}
+nav ul a:hover {
+  color: #FF33CC;
+}
+
+div section {
+  width: 70%;
+  margin: 1rem;
+  margin-bottom: 3rem;
+  border-bottom: solid rgba(255, 255, 255, 0.2) 0.2rem;
+}
+div section header {
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
+  border-bottom: solid rgba(255, 255, 255, 0.2) 0.2rem;
+}
+div section p {
+  width: 100%;
+}
+div section code {
+  display: block;
+  padding: 1rem;
+  background-color: #222222;
+  color: lightgreen;
+  white-space: pre-wrap;
+  margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 900px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    position: relative;
+  }
+  nav header {
+    position: relative;
+    margin: 0;
+    margin-top: -1em;
+  }
+  nav ul {
+    margin: 2em;
+    margin-left: -1em;
+    margin-top: 3em;
+    text-align: center;
+  }
+  nav ul li {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+  }
+
+  div section {
+    width: 95%;
+  }
+}/*# sourceMappingURL=style.css.map */
