@@ -111,4 +111,11 @@ nav {
   #projects {
     grid-template-columns: 1fr;
   }
+
+  #contact {
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 }
