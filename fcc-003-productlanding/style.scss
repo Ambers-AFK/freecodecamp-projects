@@ -83,6 +83,8 @@ h2 {
 
 @media screen and (max-width: 900px) {
   header {
+    margin: 0;
+    margin-left: -1em;
     display: grid;
     grid-template-columns: 1fr;
     text-align: center;
