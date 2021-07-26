@@ -73,12 +73,19 @@ h2 {
 }
 
 @media screen and (max-width: 900px) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  header img {
+    justify-self: center;
+  }
+
   #main {
     grid-template-columns: 1fr;
   }
   #main #video {
     height: 50vw;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
