@@ -69,7 +69,7 @@ div {
 
 }
 
-@media only screen and (max-width: 900px){
+@media (orientation: portrait){
   main{
     display: grid;
     grid-template-columns: 1fr;

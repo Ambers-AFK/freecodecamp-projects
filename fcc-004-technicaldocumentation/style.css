@@ -55,7 +55,7 @@ div section code {
   margin-bottom: 1.5rem;
 }
 
-@media only screen and (max-width: 900px) {
+@media (orientation: portrait) {
   main {
     display: grid;
     grid-template-columns: 1fr;
@@ -84,4 +84,6 @@ div section code {
   div section {
     width: 95%;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
