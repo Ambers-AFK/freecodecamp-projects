@@ -39,7 +39,7 @@ h1 {
   color: #e30b5d;
 }
 
-@media screen and (max-width: 900px) {
+@media (orientation: portrait) {
   body {
     width: 100%;
   }
