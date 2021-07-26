@@ -38,3 +38,12 @@ h1 {
   text-transform: uppercase;
   color: #e30b5d;
 }
+
+@media screen and (max-width: 900px) {
+  body {
+    width: 100%;
+  }
+  h1 {
+    text-align: center;
+  }
+}
